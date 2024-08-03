@@ -2,7 +2,7 @@
   "name": "auto-complete",
   "version": "1.0.0",
   "type": "module",
-  "description": "simple auto complete api",
+  "description": "Simple auto complete suggestions example. ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

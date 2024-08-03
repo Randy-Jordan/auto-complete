@@ -13,8 +13,8 @@ Simple auto complete search bar.
 
 ## Features / TODOS
 
-- [ ] Auto complete search bar
-- [ ] Debouncing 
+- [x] Auto complete search bar
+- [x] Debouncing 
 - [ ] Throttling 
 
 ## Usage
