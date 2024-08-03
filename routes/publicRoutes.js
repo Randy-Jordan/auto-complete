@@ -35,7 +35,7 @@ fastify.get("/data", async function(request, reply) {
 })
 
 fastify.get("/*", async function(request, reply) {
-    return reply.send({404: "Not Found"})
+    return reply.redirect('index.html',303)
 })
 
 }
