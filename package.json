@@ -1,0 +1,20 @@
+{
+  "name": "auto-complete",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "simple auto complete api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --env-file=.env index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/autoload": "^5.10.0",
+    "@fastify/static": "^7.0.4",
+    "fastify": "^4.28.1",
+    "fastify-healthcheck": "^4.4.0",
+    "pg": "^8.12.0"
+  }
+}
