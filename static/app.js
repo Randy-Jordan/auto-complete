@@ -1,5 +1,14 @@
 console.log("Hello world!");
+function debounce(cb, delay = 1000) {
+  let timeout
 
+  return (...args) => {
+    clearTimeout(timeout)
+    timeout = setTimeout(() => {
+      cb(...args)
+    }, delay)
+  }
+}
  async function updateDatalist() {
      const inputValue = document.getElementById('inputField').value;
     if(inputValue.length == 0) return;
@@ -31,4 +40,6 @@ console.log("Hello world!");
         console.error('Fetch error:', error);
       }
     }
-document.getElementById('inputField').addEventListener('input', updateDatalist);
+
+const debouncedUpdateDatalist = debounce(updateDatalist, 300);
+document.getElementById('inputField').addEventListener('input', debouncedUpdateDatalist);
