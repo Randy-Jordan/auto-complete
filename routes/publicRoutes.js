@@ -24,6 +24,16 @@ await fastify.register(Static, {
   wildcard: false,
 }) 
 
+
+fastify.get("/data", async function(request, reply) {
+    let matches = Object.values(fastify.data.jsonData).filter(company => {
+        const regex = new RegExp(`^${request.query.input}`,'gi');
+        return company.Symbol.match(regex) || company.Security.match(regex)
+    });
+    
+    return reply.send(matches)
+})
+
 fastify.get("/*", async function(request, reply) {
     return reply.send({404: "Not Found"})
 })

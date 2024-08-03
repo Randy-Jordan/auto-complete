@@ -9,7 +9,8 @@ async function loadJsonData() {
 }
 
 async function data(fastify){
-fastify.decorate('data', { jsonData: await loadJsonData() });
+const jsonData = await loadJsonData()
+fastify.decorate('data', { jsonData });
 }
 
 export default fp(data, {
